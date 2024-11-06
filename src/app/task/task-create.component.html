@@ -1,0 +1,18 @@
+<div class="task-create">
+    <h2>Crear Tarea</h2>
+    <form (ngSubmit)="createTask()">
+      <div>
+        <label for="nametask">Tarea:</label>
+        <input type="text" id="nametask" [formControl]="nametask" name="nametask" required />
+      </div>
+      <div>
+        <label for="statustasks">Estado:</label>
+        <select [formControl]="statustasks" name="statustasks">
+          <option value="Pending">Pendiente</option>
+          <option value="Completed">Completada</option>
+        </select>
+      </div>
+      <button type="submit">Crear</button>
+    </form>
+  </div>
+  
